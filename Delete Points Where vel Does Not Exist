@@ -1,5 +1,4 @@
 vector vel = volumesamplev(1, "vel", @P);
-
  
 if (length(vel) == 0 || !isfinite(vel)) {
     removepoint(0, @ptnum);
