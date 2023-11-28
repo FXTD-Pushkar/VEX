@@ -1,0 +1,7 @@
+// Sample the density from the Pyro simulation at the position of the current point
+float density = volumesample(1, "density", @P);
+ 
+// Delete the point if the density is zero or does not exist
+if (density <= 0) {
+    removepoint(0, @ptnum);
+}
