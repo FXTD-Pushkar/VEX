@@ -1,0 +1,6 @@
+float radius = chf("radius");  // Set the radius using a slider
+int nearpts[] = pcfind(0, "P", @P, radius, 2);  // Find nearest points within the radius
+
+if (len(nearpts) > 1) {
+    removepoint(0, @ptnum);
+}
