@@ -1,0 +1,8 @@
+float radius = 0.1;       // Increase the radius if too many points are getting deleted
+int min_count = 3;        // Lower the minimum count to avoid deleting too many points
+
+int neighbors[] = pcfind(0, "P", @P, radius, min_count + 1);
+
+if (len(neighbors) < min_count) {
+    removepoint(0, @ptnum);
+}
